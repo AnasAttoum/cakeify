@@ -51,7 +51,7 @@ export default function AddToCartButton({ product }: { product: product }) {
           </div>
           <div>
             <Label htmlFor="extra">Any Extras?</Label>
-            <Extras extras={extras} product={product} />
+            <Extras extras={extras} />
           </div>
         </div>
         <DialogFooter>
@@ -91,14 +91,12 @@ function PickSize({
 
 function Extras({
   extras,
-  product,
 }: {
   extras: {
     id: string;
     name: string;
     price: number;
   }[];
-  product: product;
 }) {
   return extras.map((extra) => {
     return (
